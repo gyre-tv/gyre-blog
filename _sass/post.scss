@@ -1,0 +1,143 @@
+.post {
+  margin-bottom: 80px;
+  &__main-title {
+    font-size: 50px;
+    line-height: 120%;
+    margin: 0 0 24px;
+  }
+
+  &__preview {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &--top {
+      margin: 24px 0 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid $blue-grey;
+    }
+  }
+
+  &__publishing-date {
+    margin-left: 8px;
+    @include bold;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  &__container {
+
+    p, ul, ol {
+      font-size: 18px;
+      line-height: 160%;
+    }
+
+    p:first-of-type {
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin: 40px 0 16px;
+      font-size: 32px;
+      line-height: 120%;
+    }
+
+    h3 {
+      margin: 40px 0 16px;
+      font-size: 24px;
+      line-height: 120%;
+    }
+
+    h4 {
+      margin: 40px 0 16px;
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $blue-grey;
+    margin-top: 40px;
+    padding-top: 24px;
+
+    & .post__categories {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media ($desktop) {
+
+  .post {
+    margin-bottom: 160px;
+    display: flex;
+    justify-content: center;
+
+    &__main-title {
+      font-size: 72px;
+      margin-bottom: 56px;
+    }
+
+    &__preview {
+      width: 1120px;
+      height: 630px;
+    }
+
+    &__categories {
+      width: 1120px;
+      padding-bottom: 50px;
+
+      &--top {
+        margin-top: 50px;
+      }
+    }
+
+    &__container {
+      width: 1120px;
+
+      h1, h2, h3, h4, h5, h6, p, ol, ul {
+        width: 800px;
+      }
+
+      p:first-of-type {
+        width: 900px;
+        font-size: 40px;
+        margin-bottom: 80px;
+      }
+
+      p, ul, ol {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+
+      h3 {
+        font-size: 32px;
+      }
+
+      h4 {
+        font-size: 28px;
+      }
+    }
+
+    &__footer {
+      margin-top: 80px;
+    }
+  }
+}

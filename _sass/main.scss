@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  height: 100%;
+  color: $blue-grey;
+  background-color: $grey;
+  overflow-x: hidden;
+  @include regular;
+}
+
+.h2-title {
+  @include bold;
+  font-size: 32px;
+  color: $blue-grey;
+  line-height: 38px;
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media ($desktop) {
+    font-size: 56px;
+    line-height: 68px;
+    margin-bottom: 56px;
+  }
+
+  @media ($desktop-hd) {
+    font-size: 80px;
+    line-height: 96px;
+  }
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include bold;
+  color: $white;
+  font-size: 14px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: none;
+  background: $primary-50;
+  cursor: pointer;
+  transition-duration: 300ms;
+  text-decoration: none;
+
+  & svg {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background-color: $primary-40;
+  }
+
+  &:active {
+    background-color: $primary-60;
+  }
+
+  @media ($desktop) {
+    font-size: 16px;
+    padding: 22px 26px;
+    background-position: 24px center;
+  }
+}

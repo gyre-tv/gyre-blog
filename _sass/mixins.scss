@@ -1,0 +1,34 @@
+@mixin regular() {
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin medium() {
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin bold() {
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin container() {
+  padding-right: 16px;
+  padding-left: 16px;
+
+  @media ($tablet) {
+    width: 704px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @media ($desktop) {
+    width: 1184px;
+  }
+
+  @media ($desktop-hd) {
+    width: 1400px;
+  }
+}

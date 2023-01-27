@@ -1,0 +1,88 @@
+---
+layout: default
+title: Gyre Blog
+---
+
+<div class='blog__title-wrapper'>
+  <h1 class='blog__page-title'>
+    Advices & insights from our team
+  </h1>
+  <p class='blog__page-description'>
+    Here we tell streamers how to collaborate, use our platform and achieve results
+    in the streaming niche.
+  </p>
+</div>
+<section class='blog__articles-container'>
+  <ul class='blog__articles-list'>
+    {% for post in paginator.posts %}
+    <li class='blog__articles-item'>
+      <a href='{{ post.url }}' class='blog__article-preview'>
+        <img src='{{ site.baseurl }}/{{post.preview}}' alt=''/>
+      </a>
+      <div class='blog__article-info-wrapper'>
+        <div class='blog__article-title-wrapper'>
+          <span class='blog__publishing-date'>{{ post.date | date: "%-d %B %Y" }} • {{post.time_to_read}}</span>
+          <h2 class='blog__article-title'>{{ post.title }}</h2>
+        </div>
+        <a class='blog__read-link' href='{{ post.url }}'>
+          <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <rect x='15.8906' y='7.19669' width='2' height='14' rx='1' transform='rotate(45 15.8906 7.19669)'
+                  fill='#F4F5F8'/>
+            <path
+              d='M8.10938 8.90381C7.55709 8.90381 7.10938 8.45609 7.10938 7.90381C7.10937 7.35152 7.55709 6.90381 8.10938 6.90381L16.5947 6.90381C17.13 6.90381 17.5705 7.32549 17.5937 7.86037L17.9473 15.9921C17.9713 16.5439 17.5434 17.0106 16.9916 17.0346C16.4399 17.0586 15.9731 16.6307 15.9492 16.079L15.6372 8.90381H8.10938Z'
+              fill='#F4F5F8'/>
+          </svg>
+          Read topic
+        </a>
+      </div>
+      <div class='blog__article-description'>{{ post.excerpt }}</div>
+      <div class='blog__categories'>
+        {% for category in post.categories %}
+        <span class='blog__category blog__category--{{category | downcase}}'>{{ category }}</span>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+<!--  <div class='blog__categories-filter'>-->
+<!--    <div class='blog__category-wrapper'>-->
+<!--      <input type='radio' checked name='category' value='all' id='all-category'/>-->
+<!--      <label for='all-category'>View all</label>-->
+<!--    </div>-->
+<!--    <div class='blog__category-wrapper'>-->
+<!--      <input type='radio' name='category' value='advices' id='advices-category'/>-->
+<!--      <label for='advices-category'>Advices</label>-->
+<!--    </div>-->
+<!--    <div class='blog__category-wrapper'>-->
+<!--      <input type='radio' name='category' value='guides' id='guides-category'/>-->
+<!--      <label for='guides-category'>Guides</label>-->
+<!--    </div>-->
+<!--    <div class='blog__category-wrapper'>-->
+<!--      <input type='radio' name='category' value='news' id='news-category'/>-->
+<!--      <label for='news-category'>News</label>-->
+<!--    </div>-->
+<!--    <div class='blog__category-wrapper'>-->
+<!--      <input type='radio' name='category' value='events' id='events-category'/>-->
+<!--      <label for='events-category'>Events</label>-->
+<!--    </div>-->
+<!--  </div>-->
+</section>
+<section class='blog__pagination'>
+  <span class='blog__pagination-count'>{{ paginator.page }} of {{ paginator.total_pages }} pages</span>
+  <ul class='blog__pagination-list'>
+    {% if paginator.previous_page %}
+    <li class='blog__pagination-item'>
+      <a href="{{ paginator.previous_page_path }}" class='blog__pagination-link'>← Previous</a>
+    </li>
+    {% else %}
+    <li class="blog__pagination-item blog__pagination-item--disabled">← Previous</li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class='blog__pagination-item'>
+      <a href="{{ paginator.next_page_path }}" class='blog__pagination-link'>Next →</a>
+    </li>
+    {% else %}
+    <li class="blog__pagination-item blog__pagination-item--disabled">Next →</li>
+    {% endif %}
+  </ul>
+</section>

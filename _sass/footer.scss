@@ -1,0 +1,168 @@
+.footer {
+  padding: 40px 0 80px;
+  background-color: $white;
+
+  &__wrapper {
+    @include container;
+  }
+
+  &__top {
+    padding-bottom: 32px;
+    border-bottom: 1px solid $blue-grey-20;
+    margin-bottom: 32px;
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 32px;
+    margin-bottom: 32px;
+
+    span {
+      display: flex;
+      align-items: center;
+      height: 48px;
+      padding-left: 32px;
+      border-left: 1px solid $blue-grey-20;
+    }
+  }
+
+  &__logo {
+    width: 120px;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__socials-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+  }
+
+  &__social-item {
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    height: 48px;
+
+    &--email {
+      justify-content: flex-start;
+      width: 100%;
+      flex-grow: 1;
+      border-radius: 0;
+
+      @media ($tablet) {
+        width: auto;
+        flex-grow: 0;
+        padding-right: 16px;
+        border-right: 1px solid $blue-grey-20;
+      }
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @include bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: $blue-grey;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: $blue-grey;
+    @include bold;
+    font-size: 16px;
+  }
+
+  &__discord-btn {
+    width: 191px;
+    background: $discord-color;
+
+    a {
+      color: $white;
+      font-size: 14px;
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__twitter-btn {
+    width: 48px;
+    background: $grey-15;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__copyright {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+
+  &__privacy-link {
+    color: $blue-grey;
+  }
+
+  &__designer {
+    color: $blue-grey-60;
+    font-size: 16px;
+  }
+
+  &__designer-link {
+    color: $blue-grey-60;
+  }
+}
+
+@media ($desktop) {
+  .footer {
+    padding: 40px 0;
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__logo-link {
+      margin-bottom: 0;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+      width: 148px;
+    }
+
+    &__contacts {
+      justify-content: flex-start;
+    }
+
+    &__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__copyright {
+      margin-bottom: 0;
+      order: 1;
+    }
+  }
+}

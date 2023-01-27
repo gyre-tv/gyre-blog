@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<section class='post'>
+  <section class='post__container'>
+    <h1 class='post__main-title'>{{page.title}}</h1>
+    <div class='post__preview'>
+      <img src='{{ site.baseurl }}/{{page.preview}}' alt=''/>
+    </div>
+    <div class='post__categories post__categories--top'>
+      {% for category in page.categories %}
+      <span class='blog__category blog__category--{{category | downcase}}'>{{ category }}</span>
+      {% endfor %}
+      <span class='post__publishing-date'>{{ page.date | date: "%-d %B %Y" }} • {{page.time_to_read}}</span>
+    </div>
+    {{content}}
+    <footer class="post__footer">
+      <div class='post__categories'>
+        {% for category in page.categories %}
+        <span class='blog__category blog__category--{{category | downcase}}'>{{ category }}</span>
+        {% endfor %}
+        <span class='post__publishing-date'>{{ page.date | date: "%-d %B %Y" }} • {{page.time_to_read}}</span>
+      </div>
+    </footer>
+  </section>
+  <section class='post__related'></section>
+</section>
