@@ -2,3 +2,7 @@ permalink: /posts/:title
 plugins: [jekyll-paginate]
 paginate: 10
 paginate_path: "page:num"
+
+domain: gyre-tv.github.io
+url: https://gyre-tv.github.io
+baseurl: /gyre-blog/
