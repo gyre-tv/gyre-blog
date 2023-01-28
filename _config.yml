@@ -3,6 +3,6 @@ plugins: [jekyll-paginate]
 paginate: 10
 paginate_path: "page:num"
 
-domain: gyre-tv.github.io
-url: https://gyre-tv.github.io
-baseurl: /gyre-blog/
+domain: blog.gyre.tv
+url: https://blog.gyre.tv
+baseurl: /
