@@ -144,6 +144,11 @@
     margin: 8px 0;
   }
 
+  &__title-link {
+    text-decoration: none;
+    color: $blue-grey;
+  }
+
   &__article-description {
     margin-bottom: 16px;
 

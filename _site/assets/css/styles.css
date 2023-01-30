@@ -136,6 +136,7 @@ body { height: 100%; color: #2a356e; background-color: #f9f9f8; overflow-x: hidd
 .blog__article-info-wrapper { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
 .blog__publishing-date { font-weight: 700; font-family: 'Roboto', sans-serif; text-transform: uppercase; font-size: 12px; line-height: 120%; color: #9c32ef; }
 .blog__article-title { font-weight: 700; font-family: 'Roboto', sans-serif; font-size: 24px; line-height: 120%; margin: 8px 0; }
+.blog__title-link { text-decoration: none; color: #2a356e; }
 .blog__article-description { margin-bottom: 16px; }
 .blog__article-description p { margin: 0; font-size: 16px; line-height: 140%; color: #4a5384; }
 .blog__read-link { min-width: 48px; width: 48px; height: 48px; background-color: #f2f2f1; font-size: 0; border-radius: 50%; display: flex; justify-content: center; align-items: center; transition-duration: 300ms; }
@@ -214,7 +215,9 @@ body { height: 100%; color: #2a356e; background-color: #f9f9f8; overflow-x: hidd
 .post__categories { display: flex; align-items: center; gap: 8px; }
 .post__categories--top { margin: 24px 0 40px; padding-bottom: 24px; border-bottom: 1px solid #2a356e; }
 .post__publishing-date { margin-left: 8px; font-weight: 700; font-family: 'Roboto', sans-serif; font-size: 12px; line-height: 120%; letter-spacing: 0.12em; text-transform: uppercase; }
+.post__container img { border-radius: 16px; }
 .post__container p, .post__container ul, .post__container ol { font-size: 18px; line-height: 160%; }
+.post__container em { font-size: 16px; font-style: normal; }
 .post__container p:first-of-type { font-size: 24px; line-height: 140%; margin-bottom: 40px; }
 .post__container h2 { margin: 40px 0 16px; font-size: 32px; line-height: 120%; }
 .post__container h3 { margin: 40px 0 16px; font-size: 24px; line-height: 120%; }
@@ -238,7 +241,7 @@ body { height: 100%; color: #2a356e; background-color: #f9f9f8; overflow-x: hidd
 .splide { background-color: #2a356e; padding: 60px 0; margin-bottom: 80px; }
 .splide__title-wrapper { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 0 16px; }
 .splide__title { color: #ffffff; margin: 0; font-size: 32px; }
-.splide .blog__articles-item, .splide p { color: #ffffff; }
+.splide .blog__articles-item, .splide .blog__title-link, .splide p { color: #ffffff; }
 .splide .blog__articles-item { padding-bottom: 0; border-bottom: none; }
 .splide .blog__articles-item::after { display: none !important; }
 .splide .blog__article-preview { border: 1px solid #f4f5f8; }

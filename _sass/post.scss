@@ -39,9 +39,23 @@
 
   &__container {
 
+    img {
+      border-radius: 16px;
+    }
+
     p, ul, ol {
       font-size: 18px;
       line-height: 160%;
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary-50;
+    }
+
+    em {
+      font-size: 16px;
+      font-style: normal;
     }
 
     p:first-of-type {
