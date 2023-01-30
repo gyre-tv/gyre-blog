@@ -21,6 +21,7 @@
     color: $blue-grey;
 
     span {
+      @include bold;
       display: flex;
       align-items: center;
       height: 48px;
