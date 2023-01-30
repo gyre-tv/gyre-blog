@@ -9,7 +9,7 @@ layout: default
     </div>
     <div class='post__categories post__categories--top'>
       {% for category in page.categories %}
-      <span class='blog__category blog__category--{{category | downcase}}'>{{ category }}</span>
+      <span class='blog__category'>{{ category }}</span>
       {% endfor %}
       <span class='post__publishing-date'>{{ page.date | date: "%-d %B %Y" }} • {{page.time_to_read}}</span>
     </div>
@@ -17,7 +17,7 @@ layout: default
     <footer class="post__footer">
       <div class='post__categories'>
         {% for category in page.categories %}
-        <span class='blog__category blog__category--{{category | downcase}}'>{{ category }}</span>
+        <span class='blog__category'>{{ category }}</span>
         {% endfor %}
         <span class='post__publishing-date'>{{ page.date | date: "%-d %B %Y" }} • {{page.time_to_read}}</span>
       </div>

@@ -12,12 +12,15 @@
   }
 
   &__go-to-website {
-    font-size: 16px;
-    line-height: 120%;
-    @include bold;
     flex: 1;
-    color: $blue-grey;
-    text-decoration: none;
+
+    a {
+      @include bold;
+      font-size: 16px;
+      line-height: 120%;
+      color: $blue-grey;
+      text-decoration: none;
+    }
   }
 
   &__header-logo-wrapper {
@@ -188,33 +191,41 @@
     }
   }
 
-  //&__categories {
-  //  display: flex;
-  //  gap: 8px;
-  //  flex-wrap: wrap;
-  //}
+  &__categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
 
-  //&__category {
-  //  @include medium;
-  //  display: inline-block;
-  //  font-size: 12px;
-  //  line-height: 120%;
-  //  padding: 8px 12px;
-  //  color: $primary-50;
-  //  background: rgba($primary-50, 0.1);
-  //  border-radius: 8px;
-  //
-  //  &--advices,
-  //  &--news {
-  //    color: $cyan-50;
-  //    background: rgba($cyan-50, 0.1);
-  //  }
-  //
-  //  &--events {
-  //    color: $secondary;
-  //    background: rgba($secondary, 0.1);
-  //  }
-  //}
+  &__category {
+    @include medium;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 120%;
+    padding: 8px 12px;
+    color: $primary-50;
+    background: rgba($primary-50, 0.1);
+    border-radius: 8px;
+
+    &:nth-child(2n) {
+      color: $cyan-50;
+      background: rgba($cyan-50, 0.1);
+    }
+
+    &:nth-child(3n) {
+      color: $secondary;
+      background: rgba($secondary, 0.1);
+    }
+
+    &:nth-child(4n) {
+      color: $green-50;
+      background: rgba($green-50, 0.1);
+    }
+    &:nth-child(5n) {
+      color: $discord-color;
+      background: rgba($discord-color, 0.1);
+    }
+  }
 
   &__pagination {
     margin-bottom: 100px;

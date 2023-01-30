@@ -18,6 +18,7 @@
     text-decoration: none;
     gap: 32px;
     margin-bottom: 32px;
+    color: $blue-grey;
 
     span {
       display: flex;
@@ -69,6 +70,8 @@
   }
 
   &__social-link {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

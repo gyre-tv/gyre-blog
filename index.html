@@ -40,7 +40,7 @@ title: Gyre Blog
       <div class='blog__article-description'>{{ post.excerpt }}</div>
       <div class='blog__categories'>
         {% for category in post.categories %}
-        <span class='blog__category blog__category--{{category | downcase}}'>{{ category }}</span>
+        <span class='blog__category'>{{ category }}</span>
         {% endfor %}
       </div>
     </li>
