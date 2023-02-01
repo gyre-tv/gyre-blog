@@ -1,5 +1,4 @@
 new Splide('.splide', {
-  autoplay: true,
   pagination: false,
   gap: '16px',
   mediaQuery: 'min',
