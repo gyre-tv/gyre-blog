@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Benefits of Collaborations in Twitch Streaming
-preview: assets/images/article-preview-1.jpg
+preview: assets/images/article-preview-6.png
 categories: [Blog, Advices]
 time_to_read: 5 min
 show_related_post: true
